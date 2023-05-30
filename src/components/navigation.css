@@ -1,0 +1,40 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100%;
+  border-bottom: 2px solid lightgray;
+}
+
+.logo-sec {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 2.5rem;
+}
+
+.navigation h1 {
+  font-weight: 400;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link li {
+  list-style-type: none;
+}
+
+.nav-link li a {
+  text-decoration: none;
+}
+
+.profile-link {
+  border-left: 2px solid lightgray;
+  padding-left: 1.5rem;
+}
