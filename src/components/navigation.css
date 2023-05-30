@@ -26,12 +26,15 @@
   gap: 2rem;
 }
 
-.nav-link li {
+.link {
+  text-decoration: none;
   list-style-type: none;
+  padding: 0.5rem 0;
 }
 
-.nav-link li a {
-  text-decoration: none;
+.active {
+  border-bottom: 1px solid;
+  padding: 0.5rem 0;
 }
 
 .profile-link {
