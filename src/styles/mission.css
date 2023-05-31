@@ -1,0 +1,87 @@
+#table-container {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#table-container td,
+#table-container th {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+.mission-name {
+  font-weight: 800;
+  vertical-align: top;
+}
+
+.mission-description {
+  font-size: 0.92rem;
+  vertical-align: top;
+}
+
+#table-container tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+#table-container th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #9290ff;
+  color: black;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.table-btns {
+  vertical-align: middle;
+}
+
+.member-btn {
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: gray;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 8px 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.join-btn {
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: white;
+  color: gray;
+  border: 1.5px solid gray;
+  outline: none;
+  padding: 8px 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.member-btn:hover {
+  background-color: #a0a0a0;
+  color: white;
+}
+
+.join-btn:hover {
+  background-color: #a0a0a0;
+  border: none;
+  color: white;
+}

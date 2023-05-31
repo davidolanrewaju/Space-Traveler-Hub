@@ -1,9 +1,11 @@
 .navigation {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  height: 10vh;
   width: 100%;
   border-bottom: 2px solid lightgray;
+  padding: 2rem 0;
+  margin-bottom: 3rem;
 }
 
 .logo-sec {
@@ -17,7 +19,9 @@
 }
 
 .navigation h1 {
-  font-weight: 400;
+  font-size: 1.7rem;
+  font-variant: small-caps;
+  font-weight: 600;
 }
 
 .nav-link {
@@ -27,14 +31,15 @@
 }
 
 .link {
+  color: #3761d4;
   text-decoration: none;
   list-style-type: none;
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
 }
 
 .active {
   border-bottom: 1px solid;
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
 }
 
 .profile-link {
