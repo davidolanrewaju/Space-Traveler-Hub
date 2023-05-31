@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { IconContext } from 'react-icons';
 import { FaTwitter, FaWikipediaW } from 'react-icons/fa';
 import { AiOutlineLink } from 'react-icons/ai';
-import { getMissions } from '../redux/missions/missionSlice';
+import { getMissions, joinMission, leaveMission } from '../redux/missions/missionSlice';
 
 const Mission = () => {
   const dispatch = useDispatch();
@@ -42,16 +42,40 @@ const Mission = () => {
                   {mission.description}
                   <br />
                   <div className="logo-container">
-                    <a aria-label="website-button" href={mission.website}><AiOutlineLink /></a>
-                    <a aria-label="wiki-button" href={mission.wikipedia}><FaWikipediaW /></a>
-                    <a aria-label="twitter-button" href={mission.twitter}><FaTwitter /></a>
+                    <a aria-label="website-button" href={mission.website} target="_blank" rel="noopener noreferrer"><AiOutlineLink /></a>
+                    <a aria-label="wiki-button" href={mission.wikipedia} target="_blank" rel="noopener noreferrer"><FaWikipediaW /></a>
+                    <a aria-label="twitter-button" href={mission.twitter} target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
                   </div>
                 </td>
                 <td className="table-btns">
                   <button type="button" className="member-btn">Not A Member</button>
+                  {mission.reserved && (
+                    <button type="button" className="member-btn change-btn">Active Member</button>
+                  )}
                 </td>
                 <td className="table-btns">
-                  <button type="button" className="join-btn">Join Mission</button>
+                  <button
+                    type="button"
+                    className="join-btn"
+                    onClick={() => {
+                      dispatch(joinMission(mission.mission_id));
+                    }}
+                  >
+                    Join Mission
+
+                  </button>
+                  {mission.reserved && (
+                    <button
+                      type="button"
+                      className="join-btn change-btn"
+                      onClick={() => {
+                        dispatch(leaveMission(mission.reserved));
+                      }}
+                    >
+                      Leave Mission
+
+                    </button>
+                  )}
                 </td>
               </tr>
             ))}
