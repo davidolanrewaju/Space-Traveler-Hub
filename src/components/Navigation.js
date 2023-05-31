@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import './navigation.css';
+import '../styles/navigation.css';
 
 const Navigation = () => (
   <div className="navigation">
@@ -8,8 +8,8 @@ const Navigation = () => (
       <h1>Space Travelers&apos; Hub</h1>
     </div>
     <div className="nav-link">
-      <NavLink to="/rockets" className="link">Rockets</NavLink>
-      <NavLink to="/missions" className="link">Missions</NavLink>
+      <NavLink to="/rockets" activeClassName="active" className="link">Rockets</NavLink>
+      <NavLink to="/missions" activeClassName="active" className="link">Missions</NavLink>
       <NavLink to="/my-profile" activeClassName="active" className="link">My Profile</NavLink>
     </div>
   </div>
