@@ -13,7 +13,7 @@ body {
   padding: 0 4rem;
 }
 
-/*---- Render Rockets ----*/
+/* ---- Render Rockets ---- */
 .rocket-details {
   display: flex;
   margin-bottom: 1rem;
