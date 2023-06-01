@@ -8,7 +8,7 @@ const Navigation = () => (
       <h1>Space Travelers&apos; Hub</h1>
     </div>
     <div className="nav-link">
-      <NavLink to="/" activeClassName="active" className="link">Rockets</NavLink>
+      <NavLink to="/rockets" activeClassName="active" className="link">Rockets</NavLink>
       <NavLink to="/missions" activeClassName="active" className="link">Missions</NavLink>
       <NavLink to="/my-profile" activeClassName="active" className="link">My Profile</NavLink>
     </div>
