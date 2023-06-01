@@ -94,7 +94,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- LIVE DEMO -->
 ### 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link](https://spacetravelerhub-k6m3.onrender.com/rockets)
+- [Live Demo Link](https://spacetravelerhub-k6m3.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
