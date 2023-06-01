@@ -3,7 +3,7 @@ import {
 } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Profile from './components/Profile';
-import Rockets from './components/Rockets';
+import Rocket from './components/Rockets';
 import Mission from './components/Mission';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route element={<Mission />} exact path="/missions" />
           <Route element={<Profile />} exact path="/my-profile" />
-          <Route element={<Rockets />} exact path="/" />
+          <Route element={<Rocket />} exact path="/" />
         </Routes>
       </div>
     </BrowserRouter>
