@@ -1,5 +1,5 @@
 import {
-  BrowserRouter, Routes, Route, Navigate,
+  BrowserRouter, Routes, Route,
 } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Profile from './components/Profile';
@@ -12,7 +12,6 @@ function App() {
       <div className="App">
         <Navigation />
         <Routes>
-          <Route element={<Navigate to="/rockets" />} path="/" />
           <Route element={<Mission />} exact path="/missions" />
           <Route element={<Profile />} exact path="/my-profile" />
           <Route element={<Rockets />} exact path="/" />
