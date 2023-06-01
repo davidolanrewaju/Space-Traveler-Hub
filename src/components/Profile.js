@@ -1,7 +1,9 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { leaveMission } from '../redux/missions/missionSlice';
 import '../styles/profile.css';
 
 const Profile = () => {
+  const dispatch = useDispatch();
   const rocketsList = useSelector((state) => state.rockets.rockets);
   const reservedRockets = rocketsList.filter((rocket) => rocket.reserved === true);
 
@@ -32,7 +34,22 @@ const Profile = () => {
           ) : (
             <ul className="mission-lists">
               {reservedMission.map((mission) => (
-                <li className="mission-list" key={mission.mission_id}>{mission.mission_name}</li>
+                <li className="mission-list" key={mission.mission_id}>
+                  {mission.mission_name}
+                  <span className="leave-profile-btn">
+                    {mission.reserved && (
+                      <button
+                        type="button"
+                        className="leave-btn"
+                        onClick={() => {
+                          dispatch(leaveMission(mission.mission_id));
+                        }}
+                      >
+                        Leave Mission
+                      </button>
+                    )}
+                  </span>
+                </li>
               ))}
             </ul>
           )}

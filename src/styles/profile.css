@@ -19,14 +19,21 @@
 }
 
 ul {
-  border: 1px solid grey;
+  border: 1px solid #c7c7c7;
 }
 
 .mission-list,
 .reserved-list {
   list-style: none;
-  border: 1px solid grey;
-  padding: 1rem 0 1rem 1rem;
+  border: 1px solid #c7c7c7;
+  padding: 1rem 2rem;
   font-size: 18px;
   font-weight: 600;
+}
+
+.mission-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
