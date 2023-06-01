@@ -12,10 +12,9 @@ function App() {
       <div className="App">
         <Navigation />
         <Routes>
-          <Route element={<Navigate to="/rockets" />} path="/" />
           <Route element={<Mission />} exact path="/missions" />
           <Route element={<Profile />} exact path="/my-profile" />
-          <Route element={<Rockets />} exact path="/rockets" />
+          <Route element={<Rockets />} exact path="/" />
         </Routes>
       </div>
     </BrowserRouter>
