@@ -1,5 +1,5 @@
 import {
-  BrowserRouter, Routes, Route, Navigate,
+  BrowserRouter, Routes, Route,
 } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Profile from './components/Profile';
