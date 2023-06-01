@@ -67,3 +67,22 @@ body {
   border-radius: 0.2rem;
   font-size: 0.9rem;
 }
+
+/* --- Profile --- */
+
+.reserved-table {
+  max-width: 350px;
+  text-align: left;
+}
+
+.list-con {
+  border: 1px solid gray;
+}
+
+.reserved-table li {
+  list-style-type: none;
+  border: 1px solid gray;
+  height: 2.5rem;
+  text-align: left;
+  padding: 7px 10px;
+}
