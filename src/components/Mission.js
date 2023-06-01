@@ -48,12 +48,19 @@ const Mission = () => {
                   </div>
                 </td>
                 <td className="table-btns">
-                  <button type="button" className="member-btn">Not A Member</button>
+                  {!mission.reserved && (
+                  <button type="button" className="not-member-btn">
+                    Not A Member
+                  </button>
+                  )}
                   {mission.reserved && (
-                    <button type="button" className="member-btn change-btn">Active Member</button>
+                    <button type="button" className="member-btn">
+                      Active Member
+                    </button>
                   )}
                 </td>
                 <td className="table-btns">
+                  {!mission.reserved && (
                   <button
                     type="button"
                     className="join-btn"
@@ -62,21 +69,22 @@ const Mission = () => {
                     }}
                   >
                     Join Mission
-
                   </button>
+                  )}
                   {mission.reserved && (
                     <button
                       type="button"
-                      className="join-btn change-btn"
+                      className="leave-btn"
                       onClick={() => {
-                        dispatch(leaveMission(mission.reserved));
+                        dispatch(leaveMission(mission.mission_id));
                       }}
                     >
                       Leave Mission
-
                     </button>
                   )}
                 </td>
+                {' '}
+
               </tr>
             ))}
           </tbody>
