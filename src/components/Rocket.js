@@ -30,6 +30,7 @@ const Rocket = ({ rocket }) => {
             handleReserverRocket();
             handleChangeColor();
           }}
+          data-testid={`reserve-button-${rocket.id}`}
         >
           {rocket.reserved ? 'Cancel reservation' : 'Reserve rocket'}
         </button>
