@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 /* eslint-disable arrow-body-style */
 import PropTypes from 'prop-types';
 import { useState } from 'react';
@@ -10,7 +11,7 @@ const Rocket = ({ rocket }) => {
   const handleChangeColor = () => {
     setChangeColor(!changeColor);
   };
-  const handleReserverRocket = () => {
+  const handleReserveRocket = () => {
     dispatch(reserveRocket(rocket.id));
   };
 
@@ -24,10 +25,10 @@ const Rocket = ({ rocket }) => {
           <p>{rocket.description}</p>
         </div>
         <button
-          className={`${(changeColor === true) ? 'cancel-reserve-btn' : 'reserve-btn'}`}
+          className={`${changeColor === true ? 'cancel-reserve-btn' : 'reserve-btn'}`}
           type="button"
           onClick={() => {
-            handleReserverRocket();
+            handleReserveRocket();
             handleChangeColor();
           }}
           data-testid={`reserve-button-${rocket.id}`}
@@ -41,11 +42,12 @@ const Rocket = ({ rocket }) => {
 
 Rocket.propTypes = {
   rocket: PropTypes.shape({
-    flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
-    id: PropTypes.string.isRequired,
-    rocket_name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    reserved: PropTypes.bool.isRequired,
-  }).isRequired,
+    flickr_images: PropTypes.arrayOf(PropTypes.string),
+    id: PropTypes.string,
+    rocket_name: PropTypes.string,
+    description: PropTypes.string,
+    reserved: PropTypes.bool,
+  }),
 };
+
 export default Rocket;
