@@ -1,0 +1,39 @@
+.reserved-rockets-con {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5rem;
+  align-items: flex-start;
+}
+
+.reserved-mission h3,
+.reserved-table h3 {
+  margin-bottom: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #5b58ff;
+}
+
+.mission-list-container p,
+.list-con span {
+  font-size: 20px;
+}
+
+ul {
+  border: 1px solid #c7c7c7;
+}
+
+.mission-list,
+.reserved-list {
+  list-style: none;
+  border: 1px solid #c7c7c7;
+  padding: 1rem 2rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.mission-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
